@@ -1,0 +1,91 @@
+<html>
+<header><title>cs495_proj_EnergySniffer</title></header>
+<body>
+<h1>EnergySniffer</h1>
+<h4>Usage/Targeted Audience</h4>
+<p>
+EnergySniffer is an home energy usage monitoring application based on smartphone sensors reading. The main objective of this project is to exploit the sensors in smartphones to detect usage of home appliances. From that usage and the detection of machine can help us to measure energy usage by that machine. However, as a part of this project, we have only exploited the Audio and Magnetic sensor for this project. As these sensors in smartphones are not powerful enough to monitor the usage of machine, so we conduct some research to identify the challenges of using the sensors in smartphone for detecting energy usage. 
+
+<p>EnergySniffer project was intially targeted to the Customers. However, later we make this project much more research oriented. So the outcomes of this project is some research analysis and challenges to implement EnergySniffer project. During this project we have hacked the Android phone to understand the operation of both Audio and Magnetic sensor. Also the audio processing and machine learning algorithm was implemented in native code C/C++ at Kernel level for better performance. Providing this source code as an efficient API for the future developer and researcher.
+
+<h4> Motivation </h4>
+<p>
+<LI>Home Energy Monitoring: About 21% of US energy is consumed by house. Energy Usage at House has an increasing trend. So monitoring the energy usage at house creates awareness among people to consume less energy and have more control over energy usage.</LI>
+<li>Sensors in SmartPhone: Now a days smartphones come with lots of sensors. Utilizing these sensors in innovative way is an interesting area of research. Using these sensors for monitoring energy usage at house is an ambitious thinking. But this ambitious idea creates something interesting research findings.</li>
+<li>Flexible and Cheap: Utilizing the sensors of smartphone for energy monitoring could provide a chip and flexible solution to current complex solution of energy monitoring.</li>
+
+<h4>Component/Modules/Use cases/</h4>
+<p> 
+Following is the flow chart diagram of the main component of the EnergySniffer System. It has mainly two components i) Offline Learning and ii) Online detecting. In offline learning it collects the sensor data to build models and in online detecting it detects the model based on capturing real sensor data.
+<IMG SRC="Flowchart.pdf" ALT="Components">   
+
+<p>
+In this project we fully implemented the Audio sensor data to collect the acoustic sensor data to build probabilistic generative models for different machine and then we use those model to detect running machines
+
+<IMG SRC="model2.png" WIDTH="120" HEIGHT="40" ALIGN="middle" ALT="Components">
+<p>
+<IMG SRC="model1.png" WIDTH="442" HEIGHT="187" ALIGN="middle" ALT="Components">
+
+<p>
+The Screen shot of the testing application is following:
+<p>
+<IMG SRC="screenshot.png" WIDTH="531" HEIGHT="755" ALIGN="middle" ALT="Components"> 
+<h4>Team role Assignment</h4>
+<TABLE SUMMARY="Task Assignment" BORDER="1" CELLSPACING="2" CELLPADDING="1">
+<TR ALIGN="left" VALIGN="top">
+	<TD>Task</TD>
+	<TD>Done by</TD>
+</TR>
+<TR ALIGN="left" VALIGN="top">
+	<TD>FFT/Signal Processing/MFCC feature Implementation </TD>
+	<TD>Mostafa</TD>
+</TR>
+<TR ALIGN="left" VALIGN="top">
+	<TD>Machine learning/ Model Implementation</TD>
+	<TD>Mostafa</TD>
+</TR>
+<TR ALIGN="left" VALIGN="top">
+	<TD>Machine detection implementation</TD>
+	<TD>Mostafa</TD>
+</TR>
+<TR ALIGN="left" VALIGN="top">
+	<TD>Magnetic Sesnsor Research</TD>
+	<TD>Mostafa</TD>
+</TR>
+<TR ALIGN="left" VALIGN="top">
+	<TD>Collecting Magnetic Sensor Data at driver level</TD>
+	<TD>Mostafa</TD>
+</TR>
+</TABLE>
+<h4>Lessor Learned or Observation</h4>
+
+<h5>Audio Sensor</h5>
+We implemented our prototype system and tested in our lab office.
+<p>
+<IMG SRC="lablayout.png" WIDTH="552" HEIGHT="298" ALIGN="middle" ALT="Components">
+<p>Following are some result of using Audio sensor data to detect machines:
+<p><IMG SRC="result1.png" WIDTH="442" HEIGHT="289" ALIGN="middle" ALT="Components">
+<p><IMG SRC="result2.png" WIDTH="492" HEIGHT="427" ALIGN="middle" ALT="Components">
+<p><IMG SRC="result3.png" WIDTH="527" HEIGHT="227" ALIGN="middle" ALT="Components">
+
+<p> In Audio Sensor experiment we were not able to detect multiple machine at a time. Also We found that signal processing taken a huge amount of processing time, which make the detection technique difficult. So We are now implementing the FFT/Signal processing and machine learning algorithm in Android OS.
+
+<h5>Magnetic Sensor</h5>
+
+When we take the magnetic sensor of the smartphone close to some running machine we saw following behavior. When the machine is turned on magnetic sensor reading shows rapid variation in data. Magnetic sensor of the smartphone measure the strength of earth magnetic field in three axis. However due to other magnetic device or electromagnetic activities the magnetic sensor reading shows some fluctuation or interference.
+
+<p><IMG SRC="magnetic1.png" WIDTH="939" HEIGHT="645" ALIGN="middle" ALT="Components">
+<p><IMG SRC="magnetic2.png" WIDTH="937" HEIGHT="678" ALIGN="middle" ALT="Components">
+
+<p> The magnetic sensor itself runs a very low bandwidth low pass filtering over the collected data. Magnetic sensor is embedded with the smartphone to detect the orientation of the smartphone screen and for calculating electronic compass. For both this purpose the magnetic field of the earth needs to be determined accurately and should be resistive to background interference noise. Thats why this sensor in smartphone use a very low bandwidth low pass filtering to make the data DC and to remove all high frequency interference. Which make it worse for developing our application on measuring electric power consume by a running machine.
+<p><IMG SRC="magnetic3.png" WIDTH="503" HEIGHT="473" ALIGN="middle" ALT="Components">
+
+<h4>Video/Pictures</h4>
+<h4>Future Work</h4>
+Following are points that we want to keep in mind to implement it in future.
+<li>We want to build complete Signal processing and important machine learning technique as  a libraries for Android OS. For future Researcher</li>
+<li>To do some research about how this large number of sensor data should be collected and processed</li>
+<li>Research on android phone audio driver libraries</li>
+<li>Research on magnetic sensor libraries. To add an additional magnetic sensor with the Android phone for measuring the current or energy in power line</li>
+</body>
+</html>

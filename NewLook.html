@@ -1,0 +1,347 @@
+<font><span style="font-size: 248%;"><span style="font-size: 120%;"><span style="font-size: 150%;"><span style="font-size: 200%;"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<title>D3 Test</title>
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript" src="d3/d3.v2.js"></script>
+<style type="text/css">
+	
+	.axis path,
+	.axis line {
+	    fill: none;
+    	stroke: black;
+    	shape-rendering: crispEdges;
+	}
+	
+	.axis text {
+    	font-family: sans-serif;
+    	font-size: 15px;
+		align: left;
+	}
+	
+	.report text{
+		font-family: sans-serif;
+    	font-size: 8px;
+		align: left;
+	
+	}
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+
+
+<script>
+					var w = 1000;
+					var h = 1200;
+					var padding1 = 100;
+					var padding2 = 100;
+					var padding3 = 4;
+					var cellwidth = 40;
+					var dataset1 = [ 1, -1 ];
+					var dataset2 = 
+					
+					
+
+					
+					var cellwidth = Math.round((h-padding2)/(dataset4.length+5));
+						
+					var svg = d3.select("body")
+    					        .append("svg")
+            					.attr("width", w)   // <-- Here
+            					.attr("height", h); // <-- and here!
+
+													
+								
+					
+									
+						
+									     
+		
+							  	  
+							
+							
+					
+					
+								
+								
+					var lrects = 	svg.selectAll("rect")
+									.data(dataset2)
+									.enter()
+									.append("rect");
+									
+					
+									
+					lrects.attr("x", function(d,i) {
+					  if(i<dataset2.length/2){
+						return lscale(d);}
+					  else{
+					    return w/2+padding1;} 	
+					})
+					.attr("y", function(d,i) {
+					  if(i<dataset2.length/2){
+						return padding2+i*cellwidth+padding3;}
+					  else {
+						return padding2+(i-dataset4.length)*cellwidth+padding3;}	
+					})
+					.attr("width",  function(d,i){
+						if(i<dataset2.length/2){
+						return  w/2-padding1-lscale(d);}
+						else{
+						return  rscale(d)-w/2-padding1;}
+					})
+					.attr("height", function(d,i){
+					    if(i<dataset2.length/2){
+						return cellwidth-2*padding3;}
+						else{ 
+						return cellwidth-2*padding3; }
+					})
+					.attr("fill", function(d,i){ 
+					  if(i<dataset2.length/2){
+						return "rgb(134,217,253)"}
+						else{
+						return "rgb(253,154,134)"}
+					});
+					
+					
+					
+					var lines_bar = svg.selectAll("#linebar")
+										.data(dataset3)
+										.enter()
+										.append("line");
+										
+					lines_bar.attr("stroke","white")
+							.attr("stroke-width","4")
+							.attr("id","linebar")
+							.attr("x1", function(d,i){
+								if(i<dataset3.length/2){
+								return lscale(d);}
+								else{
+								return w/2+padding1;}
+							})
+							.attr("y1", function(d,i) {
+								if(i<dataset3.length/2){
+								 return padding2+i*cellwidth+cellwidth/2;}
+								else{
+								 return padding2+(i-dataset4.length)*cellwidth+cellwidth/2;
+								}
+							})
+							.attr("x2", function(d,i){
+								if(i<dataset3.length/2){
+									return w/2-padding1; }
+								else{
+									return rscale(d);
+								}
+							})
+							.attr("y2",function(d,i){
+								if(i<dataset3.length/2){
+								 return padding2+i*cellwidth+cellwidth/2;}
+								else{
+								 return padding2+(i-dataset4.length)*cellwidth+cellwidth/2;
+								}
+							});
+							
+					var lines_cap = svg.selectAll("#linecap")
+										.data(dataset3)
+										.enter()
+										.append("line");
+										
+					lines_cap.attr("stroke","white")
+							.attr("stroke-width","4")
+							.attr("id","linecap")
+							.attr("x1", function(d,i){
+								if(i<dataset3.length/2){
+								return lscale(d);}
+								else{
+								return rscale(d);}
+							})
+							.attr("y1", function(d,i) {
+								if(i<dataset3.length/2){
+								 return padding2+i*cellwidth;}
+								else{
+								 return padding2+(i-dataset4.length)*cellwidth;
+								}
+							})
+							.attr("x2", function(d,i){
+								if(i<dataset3.length/2){
+									return lscale(d); }
+								else{
+									return rscale(d);
+								}
+							})
+							.attr("y2",function(d,i){
+								if(i<dataset3.length/2){
+								 return padding2+i*cellwidth+cellwidth;}
+								else{
+								 return padding2+(i-dataset4.length)*cellwidth+cellwidth;
+								}
+							});
+									
+					
+					
+					var lines = svg.selectAll("#yaxis")
+								.data(dataset1)
+								.enter()
+								.append("line");
+									
+					lines.attr("x1", function (d) { return w/2-d*padding1;})
+								.attr("y1", padding2)
+								.attr("x2", function(d) { return w/2-d*padding1;})
+								.attr("y2", (dataset2.length/2)*cellwidth+padding2)
+								.attr("stroke","black")
+								.attr("stroke-width","3")
+								.attr("id","yaxis");	
+					
+					svg.selectAll("#laxistext")
+								    .data(dataset1)     
+									.enter()
+									.append("text")
+									.attr("font-size","20px")
+							  	    .attr("font-style","italic")	
+							  	    .attr("text-anchor",function(d,i){
+										if(d==1){
+										 return "end";}
+										else{return "start";}
+								     })
+							        .attr("fill","black") 	
+							        .text(function(d,i){return "Life Expectancy";})
+							        .attr("x", function(d,i){
+										if(d==1){
+										return w/2-padding1;}
+										else{
+										return w/2+padding1;}  
+							         })  				
+							        .attr("y", function(d,i){
+							  	  	  return padding2+dataset4.length*cellwidth+5/2*cellwidth;}
+							        );	
+							
+				   svg.selectAll("#gender")
+								    .data(dataset1)     
+									.enter()
+									.append("text")
+									.attr("font-size","21px")
+							  	    .attr("font-style","Bold")	
+							  	    .attr("text-anchor",function(d,i){
+										if(d==1){
+										 return "end";}
+										else{return "start";}
+								     })
+							        .attr("fill","black") 	
+							        .text(function(d,i){
+									  if(d==1){
+										return "MAN";}
+										else{
+										return "WOMAN";}		
+									})
+							        .attr("x", function(d,i){
+										if(d==1){
+										return w/2-padding1;}
+										else{
+										return w/2+padding1;}  
+							         })  				
+							        .attr("y", function(d,i){
+							  	  	  return padding2-2*padding3;}
+							        );
+					
+				  svg.selectAll("#year")
+								    .data(dataset1)     
+									.enter()
+									.append("text")
+									.attr("font-size","16px")
+							  	    .attr("text-anchor",function(d,i){
+											return "middle";  })
+							        .attr("fill","black") 	
+							        .text(function(d,i){
+									  	return "Years of";
+									})
+							        .attr("x", function(d,i){
+							    		 if(i<dataset1.length/2){
+								  			return 2/3*padding1;}
+								 		else{
+								  			return w-(2/3)*padding1;}
+							  		})  				
+							   		.attr("y", function(d,i){
+							  	  	  return padding2-5*padding3;}
+							        );
+							
+				svg.selectAll("#retirement")
+								    .data(dataset1)     
+									.enter()
+									.append("text")
+									.attr("font-size","16px")
+							  	    .attr("text-anchor",function(d,i){
+											return "middle";  })
+							        .attr("fill","black") 	
+							        .text(function(d,i){
+									  	return "Retirement";
+									})
+							        .attr("x", function(d,i){
+							    		 if(i<dataset1.length/2){
+								  			return 2/3*padding1;}
+								 		else{
+								  			return w-(2/3)*padding1;}
+							  		})  				
+							   		.attr("y", function(d,i){
+							  	  	  return padding2-1*padding3;}
+							        );
+							
+							 svg.selectAll("#retirement1")
+								    .data(dataset1)     
+									.enter()
+									.append("text")
+									.attr("font-size","16px")
+							  	    .attr("text-anchor",function(d,i){
+											return "middle";  })
+							        .attr("fill","black") 	
+							        .text(function(d,i){
+									  	return "Retirement";
+									})
+							        .attr("x", function(d,i){
+							    		 if(i<dataset1.length/2){
+								  			return lscale(dataset3[0]);}
+								 		else{
+								  			return rscale(dataset3[dataset4.length]);}
+							  		})  				
+							   		.attr("y", function(d,i){
+							  	  	  return padding2-5*padding3;}
+							        );
+							
+				svg.selectAll("#age")
+								    .data(dataset1)     
+									.enter()
+									.append("text")
+									.attr("font-size","16px")
+							  	    .attr("text-anchor",function(d,i){
+											return "middle";  })
+							        .attr("fill","black") 	
+							        .text(function(d,i){
+									  	return "Age";
+									})
+							        .attr("x", function(d,i){
+							    		 if(i<dataset1.length/2){
+								  			return lscale(dataset3[0]);}
+								 		else{
+								  			return rscale(dataset3[dataset4.length]);}
+							  		}) 			
+							   		.attr("y", function(d,i){
+							  	  	  return padding2-1*padding3;}
+							        );
+				
+				
+					svg.append("g")
+    				   .attr("class", "axis")  //Assign "axis" class
+					   .attr("transform","translate(0,"+(padding1+(dataset4.length+1)*cellwidth)+")")
+    				   .call(raxis);	
+		
+					svg.append("g")
+    				   .attr("class", "axis")  //Assign "axis" class
+					   .attr("transform","translate(0,"+(padding1+(dataset4.length+1)*cellwidth)+")")
+    				   .call(laxis);	
+								
+									
+					
+</script>
+
+
+
+</body>
+</html></span></span></span></span></font>
