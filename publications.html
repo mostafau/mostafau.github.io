@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Uddin --- Publications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .links a {
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .links a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(1);
+            vertical-align: middle;
+        }
+
+        .links a:hover img {
+            filter: invert(0.7) sepia(1) saturate(10) hue-rotate(90deg);
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #00ff00;
+            background-color: #003300;
+        }
+
+        .separator {
+            color: #00ff00;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-bottom: 20px;
+
+        }
+
+        .job {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .job::before {
+            content: "# ";
+            color: #00ff00;
+            margin-left: -20px;
+        }
+
+        .job-title {
+            display: block;
+            margin-left: 20px;
+        }
+
+        .company {
+            color: #00ff00;
+            text-decoration: underline;
+        }
+
+        .duration {
+            color: #00ff00;
+        }
+
+        .bullet {
+            color: #00ff00;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li::before {
+            content: "+ ";
+            color: #00ff00;
+        }
+        .publication {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .publication::before {
+            content: "# ";
+            color: #00ff00;
+            margin-left: -20px;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .pub-authors {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .pub-venue {
+            display: block;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>Mostafa Uddin</h1>
+                     <div class="links">
+                    <a href="https://www.linkedin.com/in/mostafa-uddin/" target="_blank" title="LinkedIn">
+                        <img src="linkedin.jpeg" alt="LinkedIn">
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="https://scholar.google.com/citations?user=6uSlsIIAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                        <img src="googles.jpeg" alt="Google Scholar">
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="https://github.com/mostafau" target="_blank" title="GitHub">
+                        <img src="github.jpeg" alt="GitHub">
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" target="_blank" title="Blogs">
+                        <img src="blog.jpeg" alt="Blogs">
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="CV.pdf" target="_blank" title="CV">
+                        <img src="cv.jpeg" alt="CV">
+                    </a>
+                </div>
+            </div>
+            <div style="border-bottom: 5px dotted #00ff00; margin: 10px 0;"></div>
+            <div class="links">
+                    <a href="index.html" target="_blank">About Me</a>
+                    <span class="separator">|</span>
+                    <a href="research.html" target="_blank">Research</a>
+                    <span class="separator">|</span>
+                    <a href="teaching.html" target="_blank">Teaching</a>
+                    <span class="separator">|</span>
+                    <a href="publications.html" target="_blank">Publications</a>
+
+                </div>
+            <div style="border-bottom: 5px dotted #00ff00; margin: 10px 0;"></div>
+
+        </header>
+        <section>
+            <div style="border-bottom: 5px dotted #00ff00; margin: 10px 0;"></div>
+            <h2>Patents and Invention Disclosures</h2>
+
+            <div class="publication">
+                <span class="pub-title">Ad Hoc Service Switch-Based Control Of Ad Hoc Networking</span>
+                <span class="pub-authors">M Uddin, S Mukherjee, TV Lakshman, H Chang</span>
+                <span class="pub-venue">US Patent App. 16/498,452, 2021</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Systems and methods for encoding and decoding IoT messages</span>
+                <span class="pub-authors">M Uddin, M Kodialam, F Hao, S Mukherjee</span>
+                <span class="pub-venue">US Patent 10,826,828, 2020</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Augmented onboarding of internet-of-things devices</span>
+                <span class="pub-authors">M Uddin, F Hao, S Mukherjee, H Zhang</span>
+                <span class="pub-venue">US Patent 10,812,963, 2020</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Acknowledgment and packet retransmission for spliced streams</span>
+                <span class="pub-authors">Fang Hao, Hyunseok Chang, Sarit Mukherjee, Mostafa Uddin</span>
+                <span class="pub-venue">Publication Date: 2020/3/5. Application number: 16117749 US</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Splicing concurrent connections into a high availability session</span>
+                <span class="pub-authors">Fang Hao, Hyunseok Chang, Sarit Mukherjee, Mostafa Uddin</span>
+                <span class="pub-venue">Publication date 2020/3/5. Application Number 16117535 US</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SERVICE AUTOMATION FOR IoT DEVICES USING P4</span>
+                <span class="pub-authors">Mostafa Uddin, Hyunseok Chang, TV Lakshman, Sarit Mukherjee</span>
+                <span class="pub-venue">Publication Date 2020/2/13. Application number 16059767 US</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Wireless Software-Defined Networking</span>
+                <span class="pub-authors">Jung Gun Lee, Mostafa Abdulla Zahid Uddin, Jean Tourrilhes, Souvik Sen, Manfred R Arndt</span>
+                <span class="pub-venue">Publication number WO2015065422 A1, Publication date May 7, 2015</span>
+            </div>
+        </section>
+
+        <section>
+            <div style="border-bottom: 5px dotted #00ff00; margin: 10px 0;"></div>
+            <h2>Publications</h2>
+
+            <div class="publication">
+                <span class="pub-title">Acoustic-WiFi: Acoustic Support for Wi-Fi Networks in Smart Devices</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE Transactions on Communications, 2022</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">MAIDE: Augmented Reality (AR)-facilitated Mobile System for Onboarding of Internet of Things (IoT) Devices at Ease</span>
+                <span class="pub-authors">Huanle Zhang, Mostafa Uddin, Fang Hao, Sarit Mukherjee, Prasant Mohapatra</span>
+                <span class="pub-venue">ACM Transactions on Internet of Things, 2022</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">GLAMAR: Geo-Location Assisted Mobile Augmented Reality for Industrial Automation</span>
+                <span class="pub-authors">M Uddin, S Mukherjee, M Kodialam, TV Lakshman</span>
+                <span class="pub-venue">2020 IEEE/ACM Symposium on Edge Computing (SEC), 2020</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">CLAP: Compact Labeling Scheme for Attribute-Based IoT Policy control</span>
+                <span class="pub-authors">Mostafa Uddin, Murali Kodialam, Fang Hao, Sarit Mukherjee</span>
+                <span class="pub-venue">2019 15th International Conference on Distributed Computing in Sensor Systems (DCOSS)</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">AIDE: Augmented Onboarding of IoT Devices at Ease</span>
+                <span class="pub-authors">Huanle Zhang, Mostafa Uddin, Fang Hao, Sarit Mukherjee, Prasant Mohapatra</span>
+                <span class="pub-venue">Proceedings of the 20th International Workshop on Mobile Computing Systems and Applications, 2019</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Extreme SDN Framework for IoT and Mobile Applications Flexible Privacy at the Edge</span>
+                <span class="pub-authors">Mostafa Uddin, Tamer Nadeem, Santosh Nukavarapu</span>
+                <span class="pub-venue">IEEE PerCom 2019</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SDN-based multi-protocol edge switching for IoT service automation</span>
+                <span class="pub-authors">Mostafa Uddin, Sarit Mukherjee, Hyunseok Chang, TV Lakshman</span>
+                <span class="pub-venue">IEEE Journal on Selected Areas in Communications</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Rethinking Ranging of Unmodified BLE Peripherals in Smart City Infrastructure</span>
+                <span class="pub-authors">Shahriar Islam, Bashima and Uddin, Mostafa and Mukherjee, Sarit and Nirjon</span>
+                <span class="pub-venue">Proceedings of the 9th ACM Multimedia Systems Conference, 2018</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SDN-based Service Automation for IoT</span>
+                <span class="pub-authors">Mostafa Uddin, Sarit Mukherjee, Hyunseok Chang and T.V. Lakshman</span>
+                <span class="pub-venue">IEEE ICNP 2017 (acceptance rate 18.6% = 39/209)</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">BLESS: Bluetooth Low Energy Service Switching using SDN</span>
+                <span class="pub-authors">Mostafa Uddin, Sarit Mukherjee, Hyunseok Chang and T.V. Lakshman</span>
+                <span class="pub-venue">IEEE SmartCity 2017</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">EdgeEye: fine grained traffic visibility at wireless network edge</span>
+                <span class="pub-authors">Mostafa Uddin, Ibrahim Ben Mustafa, Tamer Nadeem</span>
+                <span class="pub-venue">2016 IEEE/ACM Symposium on Edge Computing (SEC)</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">TracVision: A Case Scenario of Pushing SDN to Wireless Edges</span>
+                <span class="pub-authors">Mostafa Uddin, Gowtham Bellala, Jeongkeun Lee, and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE MASS 2016</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Understanding the Intermittent Traffic Pattern of HTTP Video Streaming over Wireless Networks</span>
+                <span class="pub-authors">Ibrahim Ben Mustafa, Mostafa Uddin, and Tamer Nadeem</span>
+                <span class="pub-venue">WINMEE 2016</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Wearable Sensing Framework for Human Activity Monitoring</span>
+                <span class="pub-authors">Mostafa Uddin, Ahmed Salem, Ilho Nam, and Tamer Nadeem</span>
+                <span class="pub-venue">ACM WearSys'15</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Harmony: Content Resolution using Acoustic Channel (acceptance rate 19% = 316/1640)</span>
+                <span class="pub-authors">Mostafa Uddin, and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE INFOCOM 2015</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">meSDN: mobile extension of SDN</span>
+                <span class="pub-authors">Jeongkeun Lee, Mostafa Uddin, Jean Tourrilhes, Souvik Sen, Sujata Banerjee, Manfred Arndt, Kyu-Han Kim, Tamer Nadeem</span>
+                <span class="pub-venue">ACM MCS 2014 (with MobiSys 2014)</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SpyLoc: A Light Weight Localization System for Smartphones (acceptance rate 19.8% = 68/342)</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE SECON 2014</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SmartSpaghetti: Accurate and Robust Tracking of Human's Location</span>
+                <span class="pub-authors">Mostafa Uddin, Ajay Gupta, Kurt Maly, Tamer Nadeem, Sandip Godambe, Arno Zaritsky</span>
+                <span class="pub-venue">IEEE-EMBS International Conferences on Biomedical and Health Informatics, 2014</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SmartSpaghetti: Use of Smart Devices to Solve Health Care Problems (Full Paper acceptance rate=18%)</span>
+                <span class="pub-authors">Mostafa Uddin, Ajay Gupta, Kurt Maly, Tamer Nadeem, Sandip Godambe, and Arno Zaritsky</span>
+                <span class="pub-venue">International Workshop on Biomedical and Health Informatics, BIBM 2013</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">RF-Beep: A light ranging scheme for smart devices (acceptance rate 11.2% = 19/170(full paper))</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE PerCom 2013</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">A2PSM: Audio Assisted Wi-Fi Power Saving Mechanism for Smart Devices (acceptance rate 31.5%)</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">ACM HotMobile 2013</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">MagnoTricorder: What You Need To Do Before Leaving Home</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">ACM HomeSys, UbiComp 2012</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">EnergySniffer: Home Energy Monitoring System using Smart Phones</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE IWCMC, 2012</span>
+            </div>
+        </section>
+
+        <section>
+            <div style="border-bottom: 5px dotted #00ff00; margin: 10px 0;"></div>
+            <h2>Articles</h2>
+
+            <div class="publication">
+                <span class="pub-title">Report of HotMobile 2012</span>
+                <span class="pub-authors">Igor Pernek, Mostafa Uddin and Jack Fernando Bravo Torres</span>
+                <span class="pub-venue">IEEE Pervasive Computing</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">HotMobile 2012 Poster: MachineSense: Detecting and Monitoring Active Machines using Smart Phone</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">ACM SIGMOBILE MC2R</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">HotMobile 2012 Poster: Audio-WiFi: Audio Channel Assisted WiFi Network for Smart Phones</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">ACM SIGMOBILE MC2R</span>
+            </div>
+        </section>
+
+        <section>
+            <div style="border-bottom: 5px dotted #00ff00; margin: 10px 0;"></div>
+            <h2>Demos/Posters</h2>
+
+            <div class="publication">
+                <span class="pub-title">Demo: AIDE: Augmented Onboarding of IoT Devices at Ease [Best Demo runner-up]</span>
+                <span class="pub-authors">Huanle Zhang, Mostafa Uddin, Fang Hao, Sarit Mukherjee, Prasant Mohapatra</span>
+                <span class="pub-venue">Proceedings of the 20th International Workshop on Mobile Computing Systems and Applications, 2019</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Poster: Extending SDN for mobile device</span>
+                <span class="pub-authors">Jeongkeun Lee, Mostafa Uddin, Jean Tourrilhes, Souvik Sen, Sujata Banerjee, Manfred Arndt and Tamer Nadeem</span>
+                <span class="pub-venue">ACM HotMobile 2014</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">SpyLoc: a Light Weight Localization System for Smartphones [Poster][SRC Presentation]</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">In Proceedings of MobiCom'13</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">Audio-WiFi: Audio Channel Assisted WiFi Network for Smart Phones [Demo]</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE INFOCOM, 2012</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">EnergySniffer: Home Energy Monitoring System using Smart Phones [Poster]</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">IEEE INFOCOM, 2012</span>
+            </div>
+
+            <div class="publication">
+                <span class="pub-title">MachineSense: Detecting and Monitoring Active Machines using Smart Phones [Poster]</span>
+                <span class="pub-authors">Mostafa Uddin and Tamer Nadeem</span>
+                <span class="pub-venue">ACM HotMobile, 2012</span>
+            </div>
+        </section>
+</html>
